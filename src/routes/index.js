@@ -3,7 +3,10 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import { Box } from '@material-ui/core';
 import NavBar from '../components/navBar';
+
+
 const LandingPage = lazy(() => import("../containers/LandingPage/index"))
+const LogIn = lazy(() => import("../containers/LogIn/LogIn"));
 
 
 export default function App(){
@@ -19,6 +22,7 @@ export default function App(){
                 <NavBar/>
                 <Switch>
                     <Route exact path="/" component={LandingPage} />
+                    <Route exact path="/login" component={LogIn} />
                 </Switch>
             </Router>
 
