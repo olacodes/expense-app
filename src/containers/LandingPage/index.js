@@ -66,7 +66,7 @@ export default function LandingPage(props) {
                 </Grid>
               </div>
             </div>
-            <Copyright />
+            <Copyright color={'primary'}/>
           </Container>
         </div>
       </main>

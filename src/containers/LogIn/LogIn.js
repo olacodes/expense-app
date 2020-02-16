@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 import {
   Avatar,
@@ -29,13 +29,8 @@ function LogIn(props) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  const [loggedIn, setLoggedIn] = useState(false);
-
-  const [open, setOpen] = useState(false);
-
-  useEffect(() => {
-    setLoggedIn(loggedIn);
-  }, [loggedIn]);
+  const [loggedIn, setLoggedIn] = useState('');
+  const [open, setOpen] = useState(true);
 
   const handleSubmit = event => {
     event.preventDefault();
@@ -58,13 +53,15 @@ function LogIn(props) {
             props.history.push({
               pathname: "/dashboard"
             });
-          }, 600);
+          }, 1000);
+
         }
       })
       .catch(function(error) {
         setLoggedIn(400);
         setOpen(true);
       });
+      setLoggedIn('')
   };
 
   const onChangeUsername = event => {
@@ -152,7 +149,7 @@ function LogIn(props) {
         </form>
       </div>
       <Box mt={8}>
-        <Copyright />
+        <Copyright color='inherit'/>
       </Box>
     </Container>
   );
