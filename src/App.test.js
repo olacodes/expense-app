@@ -3,6 +3,7 @@ import { render } from '@testing-library/react';
 import App from './routes/index';
 import Login from './containers/LogIn/LogIn'
 import SignUp from './containers/SignUp/SignUp';
+import AddExpense from './containers/Expense/AddExpense';
 
 test('renders learn react link', () => {
   const { getByText } = render(<App />);
@@ -29,4 +30,12 @@ test('it renders username, name, email and password fields', () => {
   expect(username).toBeInTheDocument();
   expect(email).toBeInTheDocument();
 
+});
+
+test('it renders reason and value fields', () => {
+  const { getByLabelText } = render(<AddExpense />);
+  const value = getByLabelText(/value/i);
+  const reason = getByLabelText(/reason/i);
+  expect(value).toBeInTheDocument();
+  expect(reason).toBeInTheDocument();
 });
