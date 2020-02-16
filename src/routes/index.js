@@ -4,9 +4,9 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import { Box } from '@material-ui/core';
 import NavBar from '../components/navBar';
 
-
 const LandingPage = lazy(() => import("../containers/LandingPage/index"))
 const LogIn = lazy(() => import("../containers/LogIn/LogIn"));
+const SignUp = lazy(() => import('../containers/SignUp/SignUp'));
 
 
 export default function App(){
@@ -23,6 +23,8 @@ export default function App(){
                 <Switch>
                     <Route exact path="/" component={LandingPage} />
                     <Route exact path="/login" component={LogIn} />
+                    <Route exact path="/register" component={SignUp} />
+                   
                 </Switch>
             </Router>
 

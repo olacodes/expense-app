@@ -4,7 +4,7 @@ import Link from '@material-ui/core/Link'
 
 function Copyright({color}) {
     return (
-      <Typography variant="body2" color={color || 'textSecondary'} align="center">
+      <Typography variant="body1" color={color || 'textSecondary'} align="center">
         {'Copyright © '}
         <Link color="inherit" href="https://expenses-tracker-app.netlify.com/">
           TM---EXPENSE
