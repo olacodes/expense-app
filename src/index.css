@@ -16,7 +16,7 @@ code {
 #hero{
   background-image: linear-gradient(rgba(3, 22, 63, 0.877), rgba(13, 4, 88, 0.726)),
   url('/hero.jpg');
-  height: 100vh;
+  height: 100%;
 
   /* Center and scale the image nicely */
   background-position: center;
@@ -24,7 +24,6 @@ code {
   background-size: cover; 
 }
 .hero-text{
-  margin: 50px 0 !important;
   padding: 20vh 0 !important;
   color: white;
 }

@@ -32,6 +32,10 @@ function LogIn(props) {
   const [loggedIn, setLoggedIn] = useState('');
   const [open, setOpen] = useState(true);
 
+  const handleRegisterRoute = (() => {
+    props.history.push('/register')
+  })
+
   const handleSubmit = event => {
     event.preventDefault();
 
@@ -53,7 +57,7 @@ function LogIn(props) {
             props.history.push({
               pathname: "/dashboard"
             });
-          }, 1000);
+          }, 500);
 
         }
       })
@@ -141,7 +145,7 @@ function LogIn(props) {
               </Link>
             </Grid>
             <Grid item>
-              <Link href="/register" variant="body2">
+              <Link style={{cursor:'pointer'}} onClick={handleRegisterRoute} variant="body2">
                 {"Don't have an account? Sign Up"}
               </Link>
             </Grid>

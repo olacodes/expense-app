@@ -31,6 +31,10 @@ function SignUp(props) {
   const handlePassword = ((event) => {setPassword( event.target.value)})
   const handleEmail = ((event) => {setEmail(event.target.value)})
 
+  const handleLoginRoute = (() => {
+    props.history.push('/login')
+  })
+
   const handleRegister = ((event) => {
     event.preventDefault()
     axios.post('https://expense-prod.herokuapp.com/api/register/', {
@@ -57,7 +61,7 @@ function SignUp(props) {
         props.history.push({
           pathname: '/dashboard',
       })        
-      }, 1000);
+      }, 500);
       
     })
     .catch(function(error){
@@ -166,7 +170,7 @@ function SignUp(props) {
           </Button>
           <Grid container justify="flex-end">
             <Grid item>
-              <Link href="/" variant="body2">
+              <Link style={{cursor:'pointer'}} onClick={handleLoginRoute} variant="body2">
                 Already have an account? Sign in
               </Link>
             </Grid>

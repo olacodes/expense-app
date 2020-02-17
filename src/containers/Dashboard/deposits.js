@@ -25,7 +25,7 @@ export default function Deposits({expense}) {
     <React.Fragment>
       <Title>Recent expense</Title>
       <Typography component="p" variant="h5">
-        ${recentExpense && recentExpense.value}
+        #{recentExpense && recentExpense.value}
       </Typography>
 
       <Typography variant='h5' component='p' color='secondary' gutterBottom>
