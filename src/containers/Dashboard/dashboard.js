@@ -11,7 +11,6 @@ import {
   List,
   Typography,
   IconButton,
-  Badge,
   Container,
   Grid,
   Paper
@@ -19,7 +18,6 @@ import {
 
 import MenuIcon from "@material-ui/icons/Menu";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
-import NotificationsIcon from "@material-ui/icons/Notifications";
 
 import { mainListItems, secondaryListItems } from "./listItems";
 import Deposits from "./deposits";
@@ -39,7 +37,7 @@ export default function Dashboard(props) {
   const [open, setOpen] = useState(false)
   
   const classes = useStyles();
-  const [drawerOpen, setDrawerOpen] = useState(true);
+  const [drawerOpen, setDrawerOpen] = useState(false);
   
   // Retrieve Token and userId from the local storge
   const token = localStorage.getItem("token");
@@ -150,11 +148,7 @@ export default function Dashboard(props) {
           >
             Dashboard
           </Typography>
-          <IconButton color="inherit">
-            <Badge badgeContent={1} color="secondary">
-              <NotificationsIcon />
-            </Badge>
-          </IconButton>
+          
           <Button
             variant="contained"
             color="primary"

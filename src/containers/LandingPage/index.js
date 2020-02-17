@@ -37,9 +37,9 @@ export default function LandingPage(props) {
                 TM---EXPENSE
               </Typography>
               <Typography variant="h5" align="center" paragraph gutterBottom>
-                TM--Expense app is online expense reporting software,
-                tailor-made for businesses worldwide to automate expense report
-                creation, streamline approvals and make swift reimbursements.
+                TM--Expense app is an online expense reporting software,
+                made for businesses to automate expense report
+                creation and make swift decisions.
               </Typography>
               <div className={classes.heroButtons}>
                 <Grid container spacing={3} justify="center">
