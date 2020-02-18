@@ -6,7 +6,7 @@ function Copyright({color}) {
     return (
       <Typography variant="body1" color={color || 'textSecondary'} align="center" >
         {'Copyright © '}
-        <Link color="inherit" href="https://expenses-tracker-app.netlify.com/" >
+        <Link color="inherit" href="#" >
           TM---EXPENSE
         </Link>{' '}
         {new Date().getFullYear()}

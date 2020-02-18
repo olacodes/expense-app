@@ -4,7 +4,7 @@ import {
   CssBaseline,
   Grid,
   Typography,
-  Container
+  Container,
 } from "@material-ui/core";
 
 import useStyles from "./styles";
@@ -37,7 +37,7 @@ export default function LandingPage(props) {
                 TM---EXPENSE
               </Typography>
               <Typography variant="h5" align="center" paragraph gutterBottom>
-                TM--Expense app is an online expense reporting software,
+                TM---Expense app is an online expense reporting software,
                 made for businesses to automate expense report
                 creation and make swift decisions.
               </Typography>
