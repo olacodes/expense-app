@@ -123,7 +123,7 @@ export default function Dashboard(props) {
 
       <CssBaseline />
       <AppBar
-        position="absolute"
+        position="fixed"
         className={clsx(classes.appBar, drawerOpen && classes.appBarShift)}
       >
         <Toolbar className={classes.toolbar}>
