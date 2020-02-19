@@ -1,4 +1,5 @@
 import React from "react";
+import Moment from 'react-moment'
 import { makeStyles } from "@material-ui/core/styles";
 import {
   Link,
@@ -43,9 +44,9 @@ export default function Orders(props) {
           {expenses &&
             expenses.map(expense => (
               <TableRow key={expense.id}>
-                <TableCell>{expense.date_added}</TableCell>
+                <TableCell><Moment format="D-MM-YYYY HH:mm">{expense.date_added}</Moment></TableCell>
                 <TableCell>{expense.reason}</TableCell>
-                <TableCell align="right">{"#" + expense.value}</TableCell>
+                <TableCell align="right">&#x00023;{expense.value}</TableCell>
                 <TableCell align="right">
                   <Button size="small" variant="contained" color="primary">
                     Update
